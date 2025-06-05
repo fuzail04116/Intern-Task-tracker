@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Task = require('../models/Task');
 
-// POST /tasks - Create a new task
+
 router.post('/', async (req, res) => {
   try {
     const task = new Task(req.body);
@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// ✅ PATCH /tasks/:id - Update only the status of a task
+
 router.patch('/:id', async (req, res) => {
   try {
     const { status } = req.body;
